@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -46,4 +46,100 @@ h1, h2, h3, h4, h5, h6, p {
 
 .hidden {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.dark {
+  background-color: rgb(1, 1, 22);
+  color: #fff;
+}
+
+.dark  .main-wrapper {
+  background-color: rgb(12, 214, 123);
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.main-wrapper {
+  position: relative;
+  background-color: rgb(14, 237, 229);
+  color: #fff;
+  display: inline-block;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.main-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 185px;
+  height: 180px;
+  background-image: url('./../img/github.png');
+  background-size: contain;
+  top: 0;
+  left: -400px;
+}
+
+.main-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 185px;
+  height: 180px;
+  background-image: url('./../img/github2.png');
+  background-size: contain;
+  top: 70px;
+  right: -400px;
+}
+
+#user-img {
+  border-radius: 50%;
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.user-item + .user-item {
+  margin-left: 25px;
+}
+
+.data-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(11, 5, 57);
+}
+
+.user-basic {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: rgb(11, 5, 57);
+}
+
+.user-item {
+  font-weight: 700;
+}
+
+#user-login {
+  color: rgb(11, 5, 57);
+}
+
+.form-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
+}
+
+#main-input {
+  padding: 5px 30px;
+  border-radius: 25px;
+}
