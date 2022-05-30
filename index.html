@@ -1,60 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <title>Github User</title>
+  </head>
+  <body>
     <main>
-        <div class="form-controls">
-            <button class="btn btn-dark me-3" id="mode-btn">Change Mode</button>
+      <div class="form-controls">
+        <form id="main-form">
+          <input
+            id="main-input"
+            class=""
+            type="text"
+            placeholder="Search User..."
+            required
+          />
+          <button class="" id="main-btn" type="submit">Search</button>
+        </form>
+      </div>
 
-            <form id="main-form">
-                <input id="main-input" class="me-3" type="text" placeholder="enter username">
-                <button class="btn btn-success" id="main-btn" type="submit">Submit</button>
-            </form>
-        </div>
-
-        <div id="wrapper"></div>
+      <div id="wrapper"></div>
     </main>
-    
+
     <template id="template">
-        <div class="main-wrapper">
-            <div class="data-wrapper">
-                <p>created-data: <span id="user-data"></span></p>
-                <p>id: <span id="user-id"></span></p>
-            </div>
-            <ul class="user-list">
-                <li class="user-item col">
-                    <img id="user-img" src="" alt="user" width="200" height="200">
-                </li>
-            
-                <li class="user-item col">
-                    <h3 id="user-login"></h3>
-                    <h3 id="user-loc"></h3>
-                    <h3 id="user-name"></h3>
-                </li>
-            
-                <li class="user-item col">
-                    <p>Follower: <span id="user-follower"></span></p>
-                    <p>Following: <span id="user-following"></span></p>
-                    <p>Repository: <span id="user-repo"></span></p>
-                </li>
-            </ul>
-            <div class="user-basic">
-                <h3>type: <span id="user-type"></span></h3>
-                <a href="" target="_blank" id="user-github" class="btn btn-primary">Github</a>
-            </div>
+      <div class="main-wrapper">
+        <div class="user-first-wrapper">
+          <img
+            id="user-img"
+            src="https://picsum.photos/200"
+            alt="user"
+            width="200"
+            height="200"
+          />
+
+          <ul class="user-loc-wrapper">
+            <li>
+              <i class="bi bi-twitter"></i>
+              <span id="user-twitter">@ibragimov477</span>
+            </li>
+            <li>
+              <i class="bi bi-building"></i
+              ><span id="user-company">Najot Ta'lim</span>
+            </li>
+            <li>
+              <i class="bi bi-link-45deg"></i
+              ><span id="user-linkedin">https://linkedin.com/ibragimov</span>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt"></i><span id="user-loc">Tashkent</span>
+            </li>
+          </ul>
         </div>
+
+        <div class="user-second-wrapper">
+          <ul class="user-num-wrapper">
+            <li class="user-num-item">
+              Followers
+              <p id="user-follower">87</p>
+            </li>
+
+            <li class="user-num-item">
+              Following
+              <p id="user-following">32</p>
+            </li>
+
+            <li class="user-num-item">
+              Repositories
+              <p id="user-repo">134</p>
+            </li>
+          </ul>
+
+          <ul class="user-basic-wrapper">
+            <li id="user-name">Amirshoh</li>
+            <li id="user-login">@Ibragim0v</li>
+            <li id="user-summary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              similique voluptates eveniet voluptatibus iure quod nulla commodi
+              quidem ratione! Est tempore, modi nemo enim quae voluptate, iste
+              impedit placeat officia alias debitis assumenda quas
+              exercitationem consectetur quos quod perspiciatis eaque laborum
+              incidunt! Consectetur eos molestiae eius facilis fugiat delectus
+              velit.
+            </li>
+            <a target="_blank" class="btn btn-danger" id="user-github"
+              >Github</a
+            >
+          </ul>
+        </div>
+      </div>
     </template>
     <!-- JAVASCRIPT -->
     <script src="./js/bootstrap.js"></script>
     <script src="./js/main.js"></script>
     <!-- /JAVASCRIPT -->
-</body>
+  </body>
 </html>
