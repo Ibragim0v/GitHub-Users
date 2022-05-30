@@ -24,8 +24,6 @@ function renderUsers(array, node) {
   array.forEach((item) => {
     let userTemplate = elTemplate.cloneNode(true);
 
-    console.log(item);
-
     userTemplate.querySelector("#user-img").src = item.avatar_url;
     userTemplate.querySelector("#user-github").href = item.html_url;
     userTemplate.querySelector("#user-login").textContent = "@" + item.login;
