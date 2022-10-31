@@ -45,3 +45,5 @@ function renderUsers(array, node) {
   elInput.value = null;
   node.appendChild(userFragment);
 }
+
+console.log("Your crap website is now awesome!");
